@@ -45,7 +45,7 @@ fclose(fileID);
 R=287;
 
 %conversion in SI units
-P=P*10^3;
+P=P*10^2;
 
 Mass=Mass/1000;
 
