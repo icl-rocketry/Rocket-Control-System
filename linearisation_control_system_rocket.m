@@ -8,7 +8,7 @@ f2=T*sin(theta)/m-0.5*rho*Sref*Cd*(W^2)*sin(theta)/m-9.81;
 
 A=[diff([f1;f2],z),diff([f1;f2],W)];
 
-A(2,2)=-(Cd.*Sref.*W.*rho.*sin(theta))./m;
+A(2,2)=0;%subs w=0
 
 B=diff([f1;f2],T);
 
@@ -28,6 +28,11 @@ rhosubs=rho;
 
 Mass_subs=Mass;
 
+Cdaverage=sum(Cdsubs)/123;
+
+
+syms Cd
+A=subs(A,Cd,Cdaverage);
 
 syms Cd Sref W rho theta m
 for i=1:123
