@@ -3,25 +3,25 @@ clc
 
 fileID=fopen('open_rocket_data_corrected.csv','r');
 
-time(1:123)=0; %in seconds
+time(1:360)=0; %in seconds
 
-altitude(1:123)=0; %in meters
+altitude(1:360)=0; %in meters
 
-Vertical_velocity(1:123)=0; %,m/s
+Vertical_velocity(1:360)=0; %,m/s
 
-pitchrate(1:123)=0;%degrees /s
+pitchrate(1:360)=0;%degrees /s
 
-Mass(1:123)=0;%grams
+Mass(1:360)=0;%grams
 
-Cd(1:123)=0;
+Cd(1:360)=0;
 
-T(1:123)=0;%temperature in celcius
+T(1:360)=0;%temperature in celcius
 
-P(1:123)=0;% in mbar
+P(1:360)=0;% in mbar
 
 Sref=210.06*(10-2)^2; %reference area in m^2
 
-for i=1:123
+for i=1:360
     time(i)=fscanf(fileID,'%f',1);
 
     altitude(i)=fscanf(fileID,'%f',1);
