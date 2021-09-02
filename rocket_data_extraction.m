@@ -19,7 +19,7 @@ T(1:360)=0;%temperature in celcius
 
 P(1:360)=0;% in mbar
 
-Sref=210.06*(10-2)^2; %reference area in m^2
+Sref=210.06*(10^-2)^2; %reference area in m^2
 
 for i=1:360
     time(i)=fscanf(fileID,'%f',1);
