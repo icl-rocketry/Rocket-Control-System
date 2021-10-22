@@ -70,6 +70,8 @@ for i=1:length(T)-1
 flight_angle(i+1)=flight_angle(i)+dt(i)*pitch_rate_average(i);
 end
 
+flight_angle=flight_angle+pi/2;
+
 drag=1/2*rho.*Vertical_velocity.^2.*Cd.*Sref;
 
 altitude_series=timeseries(altitude',time');
